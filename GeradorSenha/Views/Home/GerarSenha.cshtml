@@ -1,4 +1,6 @@
-﻿@{
+﻿@model GeradorSenha.Models.GerarSenhaViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -16,12 +18,13 @@
             <label class="form-label" for="form2Example1">............</label>
         </div>
         <div class="col-sm-4" style="border: solid 1px #e3e6e8; border-radius: 1em; margin-left:10px;">
-            <form>
+            <form asp-action="GerarSenha" method="post">
                 <br />
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" id="form2Example1" class="form-control" />
+                    <input type="text" id="form2Example1" class="form-control" />
                     <label class="form-label" for="form2Example1">Numero de chars</label>
+                    <span asp-validation-for="Numero de chars" class="text-danger"></span>
                 </div>
 
                 <!-- 2 column grid layout for inline styling -->

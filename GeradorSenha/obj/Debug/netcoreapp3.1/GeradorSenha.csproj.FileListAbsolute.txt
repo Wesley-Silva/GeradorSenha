@@ -341,8 +341,6 @@ C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\staticwebassets\msbuild
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.TagHelpers.input.cache
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.TagHelpers.output.cache
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.RazorCoreGenerate.cache
-C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -355,3 +353,4 @@ C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.csproj.Cop
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.dll
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.pdb
 C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\GeradorSenha.genruntimeconfig.cache
+C:\dev\GeradorSenha\GeradorSenha\obj\Debug\netcoreapp3.1\Razor\Views\Home\GerarSenha.cshtml.g.cs
