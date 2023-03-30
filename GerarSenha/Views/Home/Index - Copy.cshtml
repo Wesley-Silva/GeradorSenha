@@ -1,0 +1,80 @@
+﻿@model SenhaViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="row">
+        <div class="col-md-7" style="border: solid 1px #dee2e6; border-radius: 12px;">
+            @if (ViewBag.senhas != null)
+            {
+                @foreach (var item in ViewBag.senhas)
+                {
+                    <label class="form-label" style="color:blue;font-weight: bold">@item</label><br />
+                }
+            }
+            else
+            {
+                <label class="form-label" style="color:blue;font-weight: bold">Vazio!!!</label>
+            }
+                      
+        </div>
+
+        <div class="col-md-5" style="border: solid 1px white">
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="caracteres" asp-for="@Model.Caracteres" class="form-control" />
+                    <label class="form-label" for="NumeroCaracteres">Nº Caracterer</label>
+                    @*<span asp-validation-for="@Model.Caracteres" class="text-danger"></span>*@
+                </div>
+                
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                        @for (int i = 0; i < Model.ListaCheckBoxes.Count; i++)
+                        {
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" asp-for="@Model.ListaCheckBoxes[i].IsChecked"  />
+                                <label class="form-check-label">
+                                    @Model.ListaCheckBoxes[i].Title
+                                </label>
+                                <input type="hidden" asp-for="@Model.ListaCheckBoxes[i].Id" />
+                                <input type="hidden" asp-for="@Model.ListaCheckBoxes[i].Title" /> &nbsp;
+                            </div>
+                        }                       
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" onclick="valida_form()" class="btn btn-primary btn-block">Gerar</button>
+            </form>
+        </div>
+    </div>
+</div>
+@*@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var qtde = $('#caracteres').val();
+            if(qtde > 20){
+                alert('O maximo de caracteres são 20');
+                return false;
+            }
+        });
+    </script>
+}*@
+
+<script type="text/javascript" language="javascript">
+    function valida_form() {
+        if (document.getElementById("caracteres").value.length <= 0) {
+            alert('Por favor, preencha o campo caracteres');
+            document.getElementById("caracteres").focus();
+            return false
+        }
+        if (document.getElementById("caracteres").value > 30) {
+            alert('Limite de 30 no campo caracteres');
+            document.getElementById("caracteres").focus();
+            return false
+        }
+    }
+</script>
+
